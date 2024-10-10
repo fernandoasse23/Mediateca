@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 2 - Operadores Spread</title>
 </head>
 <body>
+    <!--
+    opera
+    -->
     <h2>OPerador Spread</h2>
+    <div>cfb</div>
+    <div>curso de js</div>
+    <div>fernando</div>
     <script>
-       
+       const soma = (v1,v2,v3) =>{
+        return v1+v2+v3
+       }
+
+       let valores = [1,4,5]
+       console.log(soma(...valores))
+
+       //trabalhando htmlColections com operador Spread
+
+       //HTML Colecction
+       const objs1 = document.getElementsByTagName("div");
+
+       //Array de element HTML
+       const objs2 = [...document.getElementsByTagName("div")];
+
+       console.log(objs1)
+       console.log(objs2)
+
+       objs2.forEach(element => {
+        element.textContent= "estamos mortos"
+        console.log(element)
+       })
     </script>
 </body>
 </html>
